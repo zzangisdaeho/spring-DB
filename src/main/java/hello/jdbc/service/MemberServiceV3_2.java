@@ -13,6 +13,7 @@ import java.sql.SQLException;
 
 /**
  * 트랜잭션 - 트랜잭션 템플릿
+ * 기존에 서비스코드에서 트랜잭션 매니저를 통해 커넥션을 획득하고, Commit or Rollback하는 공통부분을 탬플릿화
  */
 @Slf4j
 public class MemberServiceV3_2 {

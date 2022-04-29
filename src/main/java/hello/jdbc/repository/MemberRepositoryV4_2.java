@@ -14,6 +14,9 @@ import java.util.NoSuchElementException;
 
 /**
  * SQLExceptionTranslator 추가
+ * 체크 예외를 런타임 예외로 변경하는것은 번거롭고, DB마다 에러코드 체계가 달라서 관리하기가 매우매우 힘들다.
+ * 스프링은 RDB 대부분의 코드체계를 미리 org.springframework.jdbc.support.sql-error-codes.xml 에 대신 기록해놓고 각 에러코드에 맞는 Runtime Exception을 반환한다.
+ * 스프링의 예외체계의 대략적인 로드맵은 reference에 따로 캡쳐해놨으니, 필요하면 해당 error를 인위적으로 try catch하여 사용하자.
  */
 @Slf4j
 public class MemberRepositoryV4_2 implements MemberRepository{
